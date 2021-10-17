@@ -5,11 +5,12 @@
     width: rem(255);
     padding: rem(24);
     text-align: center;
+    border-radius: rem(5);
     background: var(--dark-card);
     color: var(--dark-text1);
 
     &--facebook{
-            
+        border-top: rem(5) solid var(--facebook);     
     }
     &--twitter{
 
@@ -50,6 +51,7 @@
     }
 
     &__followers{
+        margin-bottom: rem(25);
     }
 
     &__count{
@@ -76,13 +78,24 @@
     }
 
     &__change{
-        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: rem(12);
+        font-weight: 700;
         &--up{
-
+            color: var(--limegreen);
         }
 
         &--down{
-
+            color: var(--brightred);
         }
+
+        img{
+            margin-right: rem(4);
+        }
+    }
+
+    &__number{
     }
 }
