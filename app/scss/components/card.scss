@@ -2,4 +2,68 @@
 
 .card{
     padding: rem(20);
+    background: var(--dark-card);
+    color: var();
+
+    &--facebook{
+            
+    }
+    &--twitter{
+
+    }
+    &--instagram{
+
+    }
+    &--youtube{
+
+    }
+
+    &__platform{
+
+    }
+
+    &__icon{
+        &--facebook{
+            
+        }
+        &--twitter{
+
+        }
+        &--instagram{
+
+        }
+        &--youtube{
+
+        }
+    }
+
+    &__username{
+
+    }
+
+    &__count{
+
+        &__big{
+
+        }
+
+        &__small{
+
+        }
+    }
+
+    &__label{
+
+    }
+
+    &__change{
+        
+        &--up{
+
+        }
+
+        &--down{
+
+        }
+    }
 }
