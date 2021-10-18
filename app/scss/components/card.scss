@@ -15,6 +15,7 @@
 }
 
 .card{
+    position: relative;
     flex: 1;
     width: rem(255);
     padding: rem(24);
@@ -22,6 +23,7 @@
     border-radius: rem(5);
     background: var(--dark-card);
     color: var(--dark-text1);
+    overflow: hidden;
 
     &--facebook{
         border-top: rem(5) solid var(--facebook);     
@@ -30,7 +32,19 @@
         border-top: rem(5) solid var(--twitter);     
     }
     &--instagram{
-        border-top: rem(5) solid var( --instagram-start);     
+        padding-top:  rem(30);
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 0;
+            height: rem(5);
+            width: 100%;
+            background: linear-gradient(225deg, var(--instagram-start) 0%,
+                        var(--instagram-middle) 50.91%, var(--instagram-end) 100%);
+
+        }
     }
     &--youtube{
         border-top: rem(5) solid var(--youtube);     
@@ -40,6 +54,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        height: rem(20);
+        margin-top: rem(5);
         margin-bottom: rem(28);
     }
 
