@@ -24,6 +24,12 @@
     background: var(--dark-card);
     color: var(--dark-text1);
     overflow: hidden;
+    transition: background 150ms ease-in-out;
+    cursor: pointer;
+
+    &:hover{
+        background: var(--dark-card-hover);
+    }
 
     &--facebook{
         border-top: rem(5) solid var(--facebook);     
@@ -61,8 +67,14 @@
         margin-bottom: rem(28);
     }
 
+    &__subtitle{
+        font-size: rem(14);
+        font-weight: 700;
+    }
+
     &__icon{
         margin-right: rem(8);
+
         &--facebook{
             
         }
@@ -96,7 +108,7 @@
         }
 
         &--small{
-
+            font-size: rem(32);
         }
     }
 
