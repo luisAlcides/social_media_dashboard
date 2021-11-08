@@ -1,45 +1,48 @@
-@use '../util/' as *;
+@use '../util/'as *;
 
-.cards{
+.cards {
     display: grid;
     grid-template-columns: 1fr;
     gap: rem(30);
 
-    @include breakpoint(medium){
+    @include breakpoint(medium) {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @include breakpoint(large){
+    @include breakpoint(large) {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-.card{
+.card {
     position: relative;
     flex: 1;
     width: rem(255);
     padding: rem(24);
     text-align: center;
     border-radius: rem(5);
-    background: var(--dark-card);
+    background: var(--card-bg);
     color: var(--dark-text1);
     overflow: hidden;
     transition: background 150ms ease-in-out;
     cursor: pointer;
 
-    &:hover{
-        background: var(--dark-card-hover);
+    &:hover {
+        background: var(--card-hover);
     }
 
-    &--facebook{
-        border-top: rem(5) solid var(--facebook);     
+    &--facebook {
+        border-top: rem(5) solid var(--facebook);
     }
-    &--twitter{
-        border-top: rem(5) solid var(--twitter);     
+
+    &--twitter {
+        border-top: rem(5) solid var(--twitter);
     }
-    &--instagram{
-        padding-top:  rem(30);
-        &::before{
+
+    &--instagram {
+        padding-top: rem(30);
+
+        &::before {
             content: '';
             position: absolute;
             display: block;
@@ -48,17 +51,18 @@
             height: rem(5);
             width: 100%;
             background: linear-gradient(225deg, var(--instagram-start) 0%,
-                        var(--instagram-middle) 50.91%, var(--instagram-end) 100%);
+                    var(--instagram-middle) 50.91%, var(--instagram-end) 100%);
 
         }
     }
-    &--youtube{
-        border-top: rem(5) solid var(--youtube);     
+
+    &--youtube {
+        border-top: rem(5) solid var(--youtube);
     }
 
- 
 
-    &__platform{
+
+    &__platform {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -67,79 +71,76 @@
         margin-bottom: rem(28);
     }
 
-    &__subtitle{
+    &__subtitle {
         font-size: rem(14);
         font-weight: 700;
+        color: var(--text-color2);
     }
 
-    &__icon{
+    &__icon {
         margin-right: rem(8);
 
-        &--facebook{
-            
-        }
-        &--twitter{
+        &--facebook {}
 
-        }
-        &--instagram{
+        &--twitter {}
 
-        }
-        &--youtube{
+        &--instagram {}
 
-        }
+        &--youtube {}
     }
 
-    &__username{
+    &__username {
         font-size: rem(12);
         font-weight: 700;
     }
 
-    &__followers{
+    &__followers {
         margin-bottom: rem(25);
     }
 
-    &__count{
+    &__count {
         font-weight: 700;
         letter-spacing: rem(-2);
         line-height: 1;
-        color: var(--light-bg);
-        &--big{
+        color: var(--text-color);
+
+        &--big {
             font-size: rem(56);
         }
 
-        &--small{
+        &--small {
             font-size: rem(32);
         }
     }
 
-    &__label{
+    &__label {
         margin-top: rem(9);
         font-size: rem(12);
         font-weight: 400;
         letter-spacing: rem(5);
-        color: var(--dark-text1);
+        color: var(--text-color2);
         text-transform: uppercase;
     }
 
-    &__change{
+    &__change {
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: rem(12);
         font-weight: 700;
-        &--up{
+
+        &--up {
             color: var(--limegreen);
         }
 
-        &--down{
+        &--down {
             color: var(--brightred);
         }
 
-        img{
+        img {
             margin-right: rem(4);
         }
     }
 
-    &__number{
-    }
+    &__number {}
 }
